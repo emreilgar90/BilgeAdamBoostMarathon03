@@ -21,8 +21,6 @@ public class TransactionDao implements IRepository<Transactions>{
 		} catch (Exception e) {
 			e.getMessage();
 			System.err.println("Some problem occured while adding Transactions data.");
-		}finally {
-			session.close();
 		}				
 	
 	}

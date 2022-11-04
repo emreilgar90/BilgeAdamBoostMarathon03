@@ -18,12 +18,10 @@ public class AccountDao implements IRepository<Account>{
 			session.getTransaction().begin();
 			session.persist(entity);
 			session.getTransaction().commit();
-			System.out.println("Book data is added to Db.");
+			System.out.println("Account data is added to Db.");
 		} catch (Exception e) {
 			e.getMessage();
-			System.err.println("Some problem occured while adding Book data.");
-		}finally {
-			session.close();
+			System.err.println("Some problem occured while adding Account data.");
 		}				
 	}
 		
@@ -34,10 +32,8 @@ public class AccountDao implements IRepository<Account>{
 		Session session = null;
 		try {
 			Account updateAccount = find(id);
-			updateAccount.setAccountNumber(entity.getAccountNumber());
 			updateAccount.setAccountTypeNumber(entity.getAccountTypeNumber());
 			updateAccount.setAccountType(entity.getAccountType());
-		//	updateUser.setUserDetail(entity.getUserDetail());
 			
 			
 			session = databaseConnection();

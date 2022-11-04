@@ -3,7 +3,7 @@ package com.bilgeadam.dao;
 import java.util.List;
 
 import org.hibernate.Session;
-
+import com.bilgeadam.model.Process;
 import jakarta.persistence.TypedQuery;
 
 public class ProcessDao implements IRepository<Process> {
@@ -20,8 +20,6 @@ public class ProcessDao implements IRepository<Process> {
 		} catch (Exception e) {
 			e.getMessage();
 			System.err.println("Some problem occured while adding Process data.");
-		}finally {
-			session.close();
 		}				
 	
 		

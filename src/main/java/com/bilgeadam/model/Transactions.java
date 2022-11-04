@@ -1,9 +1,12 @@
 package com.bilgeadam.model;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -34,11 +37,10 @@ public class Transactions {
 	private LocalDate operationDate;
 	@Column(name = "operation_amount", nullable = false)
 	private double operationAmount;
-	
+	@Enumerated(EnumType.STRING)
+	private AccountType accountType;
 	@ManyToOne
 	@JoinColumn(name="process_id", referencedColumnName = "id")
-	private Process process;
-	
-	
+	private Process process;	
 	
 }

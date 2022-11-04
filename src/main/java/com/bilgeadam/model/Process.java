@@ -28,6 +28,7 @@ public class Process {
 	private long id;
 	@Enumerated(EnumType.STRING)
 	private OperationType operationType ;
+	
 	@OneToMany(mappedBy = "process")
-private List<Transactions>transList;
+	private List<Transactions>transList;
 }

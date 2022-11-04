@@ -25,13 +25,12 @@ public class Customer {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-	@OneToMany()
 	
-	@Column(name = "first_name", nullable = false)
+	@Column(name = "first_name")
 	private String firstName;
-	@Column(name = "last_name", nullable = false)
+	@Column(name = "last_name")
 	private String lastName;
-	@Column(name = "customer_number", nullable = false)
+	@Column(name = "customer_number")
 	private long customerNumber;
 	@OneToMany(mappedBy= "customer")
 	private List<Account>accountList;

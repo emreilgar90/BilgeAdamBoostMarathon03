@@ -27,7 +27,6 @@ public class HibernateSession {
 		conf.addAnnotatedClass(Customer.class);
 		conf.addAnnotatedClass(Account.class);
 		conf.addAnnotatedClass(Process.class);
-		conf.addAnnotatedClass(Operation.class);
 		conf.addAnnotatedClass(Transactions.class);
 		conf.addAnnotatedClass(Branch.class);
 		
