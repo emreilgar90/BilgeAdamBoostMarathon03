@@ -1,8 +1,6 @@
 package com.bilgeadam.model;
 
 import java.time.LocalDate;
-import java.util.List;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -25,8 +23,6 @@ import lombok.ToString;
 @Entity
 @Table
 
-
-
 public class Transactions {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -40,7 +36,7 @@ public class Transactions {
 	@Enumerated(EnumType.STRING)
 	private AccountType accountType;
 	@ManyToOne
-	@JoinColumn(name="process_id", referencedColumnName = "id")
-	private Process process;	
-	
+	@JoinColumn(name = "process_id", referencedColumnName = "id")
+	private Process process;
+
 }

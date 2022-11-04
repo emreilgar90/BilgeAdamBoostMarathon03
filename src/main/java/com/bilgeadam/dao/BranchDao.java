@@ -5,7 +5,6 @@ import java.util.List;
 import org.hibernate.Session;
 
 import com.bilgeadam.model.Branch;
-import com.bilgeadam.model.Transactions;
 
 import jakarta.persistence.TypedQuery;
 

@@ -1,4 +1,4 @@
-package com.bilgeadam;
+package com.bilgeadam.course04.submissions.marathons.marathon03.group02;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
